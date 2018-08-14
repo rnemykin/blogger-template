@@ -599,6 +599,12 @@
             display: none;
         }
 
+        .post a.timestamp-link abbr {
+            text-decoration: none;
+            font-size: 13px;
+            color: #4f4f4f;
+        }
+
         @media screen and (max-width: 980px) {
             #sidebar-wrapper {
                 display: none;
@@ -1300,34 +1306,34 @@
                                         </div>
                                         <div class='post-footer'>
                                             <div class='post-footer-line post-footer-line-1'>
-                            <span class='post-author vcard'>
-                              <b:if cond='data:top.showAuthor'>
-                                <b:if cond='data:post.authorProfileUrl'>
-                                  <span class='fn' itemprop='author' itemscope='' itemtype='http://schema.org/Person'>
-                                    <meta expr:content='data:post.authorProfileUrl' itemprop='url'/>
-                                    <a expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
-                                      <span itemprop='name'>
-                                        <data:post.author/>
-                                      </span>
-                                    </a>
-                                  </span>
-                                  <b:else/>
-                                  <span class='fn' itemprop='author' itemscope='' itemtype='http://schema.org/Person'>
-                                    <span itemprop='name'>
-                                      <data:post.author/>
-                                    </span>
-                                  </span>
-                                </b:if>
-                              </b:if>
-                            </span>
+                            <!--<span class='post-author vcard'>-->
+                              <!--<b:if cond='data:top.showAuthor'>-->
+                                <!--<b:if cond='data:post.authorProfileUrl'>-->
+                                  <!--<span class='fn' itemprop='author' itemscope='' itemtype='http://schema.org/Person'>-->
+                                    <!--<meta expr:content='data:post.authorProfileUrl' itemprop='url'/>-->
+                                    <!--<a expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>-->
+                                      <!--<span itemprop='name'>-->
+                                        <!--<data:post.author/>-->
+                                      <!--</span>-->
+                                    <!--</a>-->
+                                  <!--</span>-->
+                                  <!--<b:else/>-->
+                                  <!--<span class='fn' itemprop='author' itemscope='' itemtype='http://schema.org/Person'>-->
+                                    <!--<span itemprop='name'>-->
+                                      <!--<data:post.author/>-->
+                                    <!--</span>-->
+                                  <!--</span>-->
+                                <!--</b:if>-->
+                              <!--</b:if>-->
+                            <!--</span>-->
                                                 <span class='post-timestamp'>
                               <b:if cond='data:top.showTimestamp'>
                                 <data:top.timestampLabel/>
                                 <b:if cond='data:post.url'>
                                   <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
                                   <a class='timestamp-link' expr:href='data:post.url' expr:title='data:post.timestamp' rel='bookmark'>
-                                    <abbr class='published' expr:title='data:post.timestamp' itemprop='datePublished dateModified'>
-                                      <data:post.timestamp/>
+                                    <abbr class='published' expr:title='data:post.date' itemprop='datePublished dateModified'>
+                                      <data:post.date/>
                                     </abbr>
                                   </a>
                                 </b:if>
@@ -1426,14 +1432,14 @@
                                         </b:if>
 
                                         <div id='meta-post'>
-                 <span class='author-link vcard'>
-                   <b:if cond='data:top.showAuthor'>
-                     <b:if cond='data:post.authorProfileUrl'>
-                       <span class='fn'>by <a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'><strong><data:post.author/></strong></a></span>
-                     </b:if>
-                   </b:if>
-                 </span>
-                                            <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestamp' itemprop='datePublished dateModified'><data:post.timestamp/></abbr></a>
+                 <!--<span class='author-link vcard'>-->
+                   <!--<b:if cond='data:top.showAuthor'>-->
+                     <!--<b:if cond='data:post.authorProfileUrl'>-->
+                       <!--<span class='fn'>by <a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'><strong><data:post.author/></strong></a></span>-->
+                     <!--</b:if>-->
+                   <!--</b:if>-->
+                 <!--</span>-->
+                                            <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.date' itemprop='datePublished dateModified'><data:post.date/></abbr></a>
 
                                         </div>
                                     </div>
@@ -1526,23 +1532,23 @@
                                         </h1></div>
                                     </b:if>
                                     <div class='post-meta'>
-                 <span class='post-author vcard'>
-                   <b:if cond='data:top.showAuthor'>
-                     <b:if cond='data:post.authorProfileUrl'>
-                       <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'><meta expr:content='data:post.authorProfileUrl' itemprop='url'/>by <a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'><span itemprop='name'><strong><data:post.author/></strong></span>
-                         </a>
-                       </span>
-                       <b:else/>
-                       <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>by <a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'><span itemprop='name'><strong><data:post.author/></strong></span></a>
-                       </span>
-                     </b:if>
-                   </b:if>
-                 </span>
+                 <!--<span class='post-author vcard'>-->
+                   <!--<b:if cond='data:top.showAuthor'>-->
+                     <!--<b:if cond='data:post.authorProfileUrl'>-->
+                       <!--<span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'><meta expr:content='data:post.authorProfileUrl' itemprop='url'/>by <a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'><span itemprop='name'><strong><data:post.author/></strong></span>-->
+                         <!--</a>-->
+                       <!--</span>-->
+                       <!--<b:else/>-->
+                       <!--<span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>by <a class='g-profile' expr:href='data:post.authorProfileUrl' expr:title='data:post.author' rel='author'><span itemprop='name'><strong><data:post.author/></strong></span></a>-->
+                       <!--</span>-->
+                     <!--</b:if>-->
+                   <!--</b:if>-->
+                 <!--</span>-->
                                         <span class='post-timestamp'>
                    <b:if cond='data:top.showTimestamp'>
                      <b:if cond='data:post.url'>
                        <meta expr:content='data:post.canonicalUrl' itemprop='url mainEntityOfPage'/>
-                       <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestamp' itemprop='datePublished dateModified'><data:post.timestamp/></abbr></a>
+                       <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.date' itemprop='datePublished dateModified'><data:post.date/></abbr></a>
                      </b:if>
                    </b:if>
                  </span>
